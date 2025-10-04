@@ -1,0 +1,147 @@
+body {
+  background-color: #0d0d0d; /* softer black */
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* center calculator vertically */
+  margin: 0;
+}
+
+.header {
+  width: 320px; /* fixed width for phone-like look */
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* input row with delete icon */
+.input-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+input {
+  flex: 1;
+  width: 92%;
+  margin-bottom: 13px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-align: right;
+  font-size: 36px;
+  caret-color: white;
+  outline: none;
+}
+
+/* result display */
+.result {
+  text-align: right;
+  font-size: 20px;
+  color: #aaa;
+  min-height: 24px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 10px 0;
+}
+
+.memory-row,
+.sci-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sci-row {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.main-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* more breathing space */
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #2e2e2e;
+  color: white;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: #3d3d3d;
+  transform: scale(1.05);
+}
+
+.operators {
+  color: #4cd964; /* nice green (like iOS) */
+}
+
+.equalsign {
+  background-color: #34c759; /* bright green button */
+  color: white;
+}
+
+.equalsign:hover {
+  background-color: #28a745;
+}
+
+button:active {
+  transform: scale(0.95);
+  background: #555;
+}
+
+/* delete icon */
+.deleteicon {
+  font-size: 86%;
+  margin-left: 87%;
+  color: #999;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.deleteicon:hover {
+  color: #ff4d4d; /* soft red */
+  transform: scale(1.2);
+}
+
+.deleteicon.active {
+  color: #28a745; /* green when active */
+}
+
+.deleteicon.active:hover {
+  color: #34c759;
+  transform: scale(1.2);
+}
+
+/* history */
+.history {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.history h4 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
