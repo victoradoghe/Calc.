@@ -103,7 +103,7 @@ const DisplayCal = () => {
         <button style={{ color: "rgba(209, 57, 27, 1)" }} onClick={HandleClear}>
           C
         </button>
-        <button onClick={() => HandleOperation("()")}>( )</button>
+        {/* <button onClick={() => HandleOperation("()")}>()</button> */}
         <button className="equalsign" onClick={HandleEqual}>
           =
         </button>
